@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAAA;EACI;EACA;;AACA;EACI","file":"../index.css","sourcesContent":["* {\n    margin: 0;\n    padding: 0;\n    body {\n        color: rgba(202, 153, 28, 0.76);\n    }\n}"]}
