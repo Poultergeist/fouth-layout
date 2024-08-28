@@ -111,13 +111,15 @@ header #header {
   height: 32px;
   border-radius: 4px;
   background-color: #337ab7;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 5px;
   cursor: pointer;
 }
 .label-burger > div {
   width: 50%;
+  margin: 2px;
   height: 2px;
   background-color: white;
   transition: all 0.5s ease;
@@ -142,16 +144,18 @@ header #header {
 @media screen and (max-width: 800px) {
   #burger:checked ~ .menu-list {
     height: 252px;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
   }
   #burger-check:checked + .label-burger div:first-child {
-    transform: rotate(35deg) translate(5px, 7px);
+    transform: rotate(35deg) translate(4px, 5px);
+    width: 65%;
   }
   #burger-check:checked + .label-burger div:nth-child(2) {
     opacity: 0;
   }
   #burger-check:checked + .label-burger div:last-child {
-    transform: rotate(-35deg) translate(5px, -7px);
+    transform: rotate(-35deg) translate(4px, -5px);
+    width: 65%;
   }
   .header-wrapper {
     flex-direction: column;
