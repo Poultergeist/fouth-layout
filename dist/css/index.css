@@ -129,7 +129,7 @@ header #header {
   box-sizing: border-box;
 }
 
-.label-burger:hover {
+.label-burger:active {
   background-color: #285f8f;
 }
 
