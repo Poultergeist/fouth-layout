@@ -147,13 +147,13 @@ header #header {
     margin-bottom: 2px;
   }
   #burger-check:checked + .label-burger div:first-child {
-    transform: rotate(1835deg) translate(4px, 5px);
+    transform: rotate(35deg) translate(4px, 5px);
   }
   #burger-check:checked + .label-burger div:nth-child(2) {
     opacity: 0;
   }
   #burger-check:checked + .label-burger div:last-child {
-    transform: rotate(-1835deg) translate(4px, -5px);
+    transform: rotate(-35deg) translate(4px, -5px);
   }
   .header-wrapper {
     flex-direction: column;
