@@ -52,12 +52,12 @@ header #header {
   flex-direction: row;
   justify-content: space-between;
   height: 100%;
-  padding: 10px 0;
 }
 
 .logo {
   display: flex;
   box-sizing: border-box;
+  margin: 10px 0;
 }
 .logo img {
   width: 80px;
@@ -107,9 +107,21 @@ header #header {
 
 .label-burger {
   display: none;
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 32px;
+  border-radius: 4px;
   background-color: #337ab7;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.label-burger > div {
+  width: 50%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.5s ease;
+  box-sizing: border-box;
 }
 
 .nav-container {
@@ -123,13 +135,41 @@ header #header {
   display: none;
 }
 
-#burger:checked ~ .menu-list {
-  height: 252px;
+#burger-check {
+  display: none;
 }
 
 @media screen and (max-width: 800px) {
+  #burger:checked ~ .menu-list {
+    height: 252px;
+    margin-bottom: 10px;
+  }
+  #burger-check:checked + .label-burger div:first-child {
+    transform: rotate(35deg) translate(5px, 7px);
+  }
+  #burger-check:checked + .label-burger div:nth-child(2) {
+    opacity: 0;
+  }
+  #burger-check:checked + .label-burger div:last-child {
+    transform: rotate(-35deg) translate(5px, -7px);
+  }
   .header-wrapper {
     flex-direction: column;
+    min-height: 70px;
+  }
+  .logo {
+    margin-top: 5px;
+    margin-bottom: 3px;
+  }
+  .logo img {
+    height: 60px;
+    width: 60px;
+  }
+  .easter-egg-header {
+    height: 70px;
+  }
+  header #header {
+    min-height: 70px;
   }
   .menu-list {
     flex-direction: column;
@@ -139,6 +179,9 @@ header #header {
   }
   .menu-item {
     justify-content: center;
+  }
+  .menu-item a {
+    padding: 9px 18px;
   }
   .label-burger {
     display: flex;
