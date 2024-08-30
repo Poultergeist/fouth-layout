@@ -5,34 +5,30 @@ header {
     width: 100%;
 
     #header {
-        @include flex-col;
+        @include flex(column, center, center);
         position: fixed;
         z-index: 10;
         min-height: 100px;
         background-color: white;
         box-shadow: 0px 5px 5px #dedede;
         width: 100%;
-        align-items: center;
     }
 }
 
 .easter-egg-header {
+    @include flex(row);
     z-index: -1;
-    display: flex;
     height: 100px;
     width: 100%;
-    justify-content: center;
-    align-items: center;
 }
 
 .header-wrapper {
-    @include flex-row;
-    justify-content: space-between;
+    @include flex(row,$justify: space-between);
     height: 100%;
 }
 
 .logo {
-    display: flex;
+    @include flex;
     box-sizing: border-box;
     margin: 10px 0;
 
@@ -43,22 +39,18 @@ header {
 }
 
 .header-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex(column, center, center);
 }
 
 .menu-list {
+    @include flex(row);
     list-style: none;
-    display: flex;
-    flex-direction: row;
     overflow: hidden;
     transition: height 0.5s ease;
 }
 
 .menu-item {
-    display: flex;
+    @include flex;
 
     a {
         padding: 10px 18px;
@@ -83,8 +75,8 @@ header {
 
 .menu-item:last-child {
     a {
+        @include round;
         background-color: $blue;
-        border-radius: 30px;
 
         span {
             color: white;
@@ -93,14 +85,11 @@ header {
 }
 
 .label-burger {
+    @include round(4px);
     display: none;
     width: 42px;
     height: 32px;
-    border-radius: 4px;
     background-color: $blue;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     margin-top: 5px;
     transition: background-color 0.2s ease;
     cursor: pointer;
@@ -122,22 +111,14 @@ header {
 
 
 .nav-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(row, center, space-between);
 }
 
-#burger {
+#burger, #burger-check {
     display: none;
 }
 
-#burger-check {
-    display: none;
-}
-
-
-@media screen and (max-width: 800px) {
+@include adaptive(800px){
     #burger:checked {
         ~.menu-list {
             height: 252px;
@@ -145,8 +126,13 @@ header {
         }
     }
 
+    .label-burger {
+        @include flex(column, center, center);
+    }
+
     #burger-check:checked {
         +.label-burger {
+
             div:first-child {
                 transform: rotate(35deg) translate(4px, 5px);
             }
@@ -162,7 +148,7 @@ header {
     }
 
     .header-wrapper {
-        flex-direction: column;
+        @include flex(column);
         min-height: 70px;
     }
 
@@ -188,22 +174,16 @@ header {
     }
 
     .menu-list {
-        flex-direction: column;
-        justify-content: center;
+        @include flex(column, $justify: flex-start);
         height: 0px;
-        justify-content: flex-start;
     }
 
     .menu-item {
-        justify-content: center;
+        @include flex($justify: center);
 
         a {
             padding: 9px 18px;
         }
-    }
-
-    .label-burger {
-        display: flex;
     }
 
     .nav-container {

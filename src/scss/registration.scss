@@ -2,26 +2,27 @@
 @import 'mixins';
 
 .reg-wrapper {
-    @include flex-row;
+    @include flex(row, $justify: center);
     background-color: $reg-gray;
-    justify-content: center;
 }
 
 .registration {
-    @include flex-row;
+    @include flex(row);
     margin-top: 54px;
 }
 
-.cource-general-info{
-    @include flex-col;
-    flex:0.93;
+.cource-general-info {
+    @include flex(column);
+    flex: 0.93;
     margin-left: 40px;
     align-self: center;
+
     h1 {
         text-align: center;
         font-size: 30px;
         margin: 30px 0;
     }
+
     span {
         text-align: center;
         padding: 0 35px;
@@ -31,8 +32,8 @@
 }
 
 #registration-form {
-    @include flex-col;
-    flex:1;
+    @include flex(column);
+    flex: 1;
     margin-left: 45px;
 
     >h2 {
@@ -42,17 +43,19 @@
 }
 
 .form-input {
-    @include flex-col;
+    @include flex(column);
 
     >label {
         margin: 10px 0 5px 0;
     }
+
     >input {
+        @include round(7px);
         padding: 12px;
-        border-radius: 7px;
         border: $ligther-grey 1px solid;
         transition: border 0.5s ease, box-shadow 0.5s ease;
     }
+
     >input:focus {
         outline: none;
         border: $ligth-blue 1px solid;
@@ -63,31 +66,32 @@
 .privacy-policy {
     margin-top: 15px;
 
-    label, a {
+    label,
+    a {
         font-size: 15px;
         text-decoration: none;
     }
 }
 
 #form-sumbit {
-	margin: 36px 0;
-	width: 370px;
-	align-self: center;
-	background-color: $blue;
-	border-radius: 30px;
-	padding: 15px 0;
-	border: none;
-	color: white;
-	text-transform: uppercase;
-	font-size: 14px;
+    @include round;
+    margin: 36px 0;
+    width: 370px;
+    align-self: center;
+    background-color: $blue;
+    padding: 15px 0;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
-@media screen and (max-width: 1140px) {
+@include adaptive(1140px) {
     .registration {
-        @include flex-col;
-        align-items: stretch;
+        @include flex(column, stretch);
         width: 100%;
         margin-top: 20px;
+
         div {
             width: 100%;
             margin: 0;
@@ -96,19 +100,33 @@
 
     .form-input>input {
         font-size: 14px;
-        padding: 13px;
+        padding: 10px;
     }
 
     #registration-form {
         width: 100%;
         margin: 0;
+        padding-top: 51px;
     }
 
     #form-sumbit {
         width: 278px;
     }
 
-    .cource-general-info>span {
-        padding: 0;
+    .cource-general-info {
+        >h1 {
+            font-size: 23px;
+            margin: 13px 0;
+        }
+        >span {
+            padding: 0;
+            line-height: 1.86;
+            padding-top: 2px;
+            font-size:13.5px;
+        }
+    }
+
+    .privacy-policy {
+        padding-top: 5px;
     }
 }
