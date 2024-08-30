@@ -59,28 +59,29 @@
               Зареєструватися на курси
             </h2>
             <div class="form-input">
+              <input type="text" id="form-name" pattern="\w{5,}" placeholder="Ім'я" required>
               <label for="form-name">Ім'я</label>
-              <input id="form-name" type="text" placeholder="Ім'я">
             </div>
             <div class="form-input">
+              <input type="text" id="form-surname" pattern="\w{5,}" placeholder="Прізвище" required>
               <label for="form-surname">Прізвище</label>
-              <input type="text" id="form-surname" placeholder="Прізвище">
             </div>
             <div class="form-input">
+              <input type="text" id="form-interested-in" pattern="(developer)|(QA)" placeholder="developer or QA" required>
               <label for="form-interested-in">Мене більше цікавить</label>
-              <input type="text" id="form-interested-in" placeholder="developer or QA">
             </div>
             <div class="form-input">
+              <input type="tel" id="form-phone" pattern="(\+38)?\(?\d{3}\)?\d{3}-?\d{2}-?\d{2}" placeholder="Номер телефону: +38 XXX XX XX XXX" required>
               <label for="form-phone">Номер телефону</label>
-              <input type="text" id="form-phone" placeholder="Номер телефону: +38 XXX XX XX XXX">
             </div>
             <div class="form-input">
+              <input type="email" id="form-email" placeholder="Email" required>
               <label for="form-email">Email</label>
-              <input type="text" id="form-email" placeholder="Email">
             </div>
             <div class="privacy-policy">
-              <input type="checkbox" name="" id="form-policy">
-              <label for="form-policy">Я погоджуюся із <a href="https://it.volyn.ua/terms-use">Політикою конфіденційності</a></label>
+              <input type="checkbox" id="form-policy" required>
+              <label for="form-policy">Я погоджуюся із <a href="https://it.volyn.ua/terms-use">Політикою
+                  конфіденційності</a></label>
             </div>
             <button type="submit" id="form-sumbit">Зареєструватися зараз</button>
           </form>
@@ -88,7 +89,6 @@
       </div>
     </div>
   </main>
-  xkjfadsjhfdsahfbhbfhj
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/app.js"></script>
 </body>
