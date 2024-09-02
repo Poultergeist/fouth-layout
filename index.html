@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fouth layout</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
   <link rel="stylesheet" href="dist/css/index.css">
 </head>
 
@@ -67,11 +69,13 @@
               <label for="form-surname">Прізвище</label>
             </div>
             <div class="form-input">
-              <input type="text" id="form-interested-in" pattern="(developer)|(QA)" placeholder="developer or QA" required>
+              <input type="text" id="form-interested-in" pattern="(developer)|(QA)" placeholder="developer or QA"
+                required>
               <label for="form-interested-in">Мене більше цікавить</label>
             </div>
             <div class="form-input">
-              <input type="tel" id="form-phone" pattern="(\+38)?\(?\d{3}\)?\d{3}-?\d{2}-?\d{2}" placeholder="Номер телефону: +38 XXX XX XX XXX" required>
+              <input type="tel" id="form-phone" pattern="(\+38)?\(?\d{3}\)?\d{3}-?\d{2}-?\d{2}"
+                placeholder="Номер телефону: +38 XXX XX XX XXX" required>
               <label for="form-phone">Номер телефону</label>
             </div>
             <div class="form-input">
@@ -88,9 +92,65 @@
         </div>
       </div>
     </div>
+    <div id="site-dev-wrapper">
+      <div class="container">
+        <div class="site-dev">
+          <span>Курс «Розробка сайтів»</span>
+          <div class="site-dev-slider">
+            <div class="site-dev-element">
+              <div class="courses-info">
+                <div class="course-img">
+                  <img src="img/icons/course-icon-1.png" alt="cource image">
+                </div>
+                <div class="course-name">
+                  Розробка сайтів на WordPress
+                </div>
+                <div class="course-desc">
+                  Курс складається з коротких навчальних відео, на яких ти пізнаєш основи WordPress, навчишся створювати
+                  сайти різної складкості: від блогів до інтернет магазинів. Всі знання закріпиш за допомогою тестових
+                  завдань.
+                </div>
+              </div>
+            </div>
+            <div class="site-dev-element">
+              <div class="courses-info">
+                <div class="course-img">
+                  <img src="img/icons/course-icon-2.png" alt="cource image">
+                </div>
+                <div class="course-name">
+                  Розробка сайтів на Drupal 8
+                </div>
+                <div class="course-desc">
+                  Для створення чудових сайтів на Drupal 8, цеглинка за цеглинкою, ти пізнаєш секрети основних та
+                  додаткових Drupal-модулів (Views, Rules, Panels, Devel, Paragraph та багатьох інших).
+                </div>
+              </div>
+            </div>
+            
+            <div class="site-dev-element">
+              <div class="courses-info">
+                <div class="course-img">
+                  <img src="img/icons/course-icon-3.png" alt="cource image">
+                </div>
+                <div class="course-name">
+                  Ознайомлення з тестуванням
+                </div>
+                <div class="course-desc">
+                  Ти дізнаєшяся про забезпечення якості в контексті різних моделей розробки ПЗ. Також QA-спеціаліст
+                  розкаже про види тестування (функціональне, регресивне, системне, тестування швидкодії тощо).
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/courses-slider.js"></script>
 </body>
 
 </html>

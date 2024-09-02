@@ -1,0 +1,89 @@
+@import 'colors';
+@import 'mixins';
+
+#site-dev-wrapper {
+    @include flex(row, center, center);
+}
+
+.site-dev {
+    @include flex(column, center, center);
+    padding-top: 72px;
+    >span {
+        font-size: 34px;
+        font-weight: 400;
+    }
+}
+
+.site-dev-slider {
+    padding-top: 28px;
+    width: 100%;
+    overflow: hidden;
+
+    .slick-track {
+        @include flex(row, stretch, center);
+    }
+
+    .slick-slide {
+        @include flex(row, center, cneter);
+    }
+    
+    .slick-dots {
+        position: unset;
+    }
+}
+
+.site-dev-element {
+    @include flex(column, center, center);
+
+    .course-img {
+        @include flex(row, center, center);
+    }
+}
+
+.courses-info {
+    @include flex(column, center, center);
+    max-width: 350px;
+    width: 100%;
+}
+
+.course-name {
+    padding: 18px 0;
+    font-size: 23px;
+    font-weight: 600;
+    color: $grey;
+    border-bottom: $blue 1px solid;
+    text-align: center;
+}
+
+.course-desc {
+    padding: 0 6px;
+    padding-top: 31px;
+    text-align: center;
+    color: $grey;
+    font-size: 15px;
+}
+
+@include adaptive(1100px){
+    .course-name{
+        font-size: 15px;
+    }
+}
+
+
+@include adaptive(500px) {
+    .site-dev {
+        padding-top: 65px 0;
+        >span {
+            font-size: 25px;
+        }
+    }
+
+    .course-name {
+        font-size: 20px;
+        padding-bottom: 1px;
+    }
+
+    .course-desc {
+        padding-top: 15px;
+    }
+}

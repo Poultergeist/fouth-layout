@@ -64,6 +64,10 @@
     }
 }
 
+.form-input>input:valid:not(:hover) {
+    border-color: #40a617;
+}
+
 .form-input-wrong:invalid {
     border: #ff8383 1px solid;
     box-shadow: #f1b0b0 0 0 10px 5px inset;
@@ -73,9 +77,12 @@
     @include flex;
     margin-top: 15px;
 
+    label {
+        padding-left: 5px;
+    }
+
     label,
     a {
-        padding-left: 5px;
         font-size: 15px;
         text-decoration: none;
     }

@@ -291,6 +291,10 @@ header #header {
   box-shadow: 0 0 5px 5px #cfe3f3;
 }
 
+.form-input > input:valid:not(:hover) {
+  border-color: #40a617;
+}
+
 .form-input-wrong:invalid {
   border: #ff8383 1px solid;
   box-shadow: #f1b0b0 0 0 10px 5px inset;
@@ -303,9 +307,11 @@ header #header {
   justify-content: flex-start;
   margin-top: 15px;
 }
+.privacy-policy label {
+  padding-left: 5px;
+}
 .privacy-policy label,
 .privacy-policy a {
-  padding-left: 5px;
   font-size: 15px;
   text-decoration: none;
 }
@@ -375,6 +381,108 @@ header #header {
   }
   .privacy-policy {
     padding-top: 5px;
+  }
+}
+
+
+/* site-dev.css */
+#site-dev-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-dev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 72px;
+}
+.site-dev > span {
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.site-dev-slider {
+  padding-top: 28px;
+  width: 100%;
+  overflow: hidden;
+}
+.site-dev-slider .slick-track {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+}
+.site-dev-slider .slick-slide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: cneter;
+}
+.site-dev-slider .slick-dots {
+  position: unset;
+}
+
+.site-dev-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.site-dev-element .course-img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.courses-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 350px;
+  width: 100%;
+}
+
+.course-name {
+  padding: 18px 0;
+  font-size: 23px;
+  font-weight: 600;
+  color: #666666;
+  border-bottom: #337ab7 1px solid;
+  text-align: center;
+}
+
+.course-desc {
+  padding: 0 6px;
+  padding-top: 31px;
+  text-align: center;
+  color: #666666;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1100px) {
+  .course-name {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .site-dev {
+    padding-top: 65px 0;
+  }
+  .site-dev > span {
+    font-size: 25px;
+  }
+  .course-name {
+    font-size: 20px;
+    padding-bottom: 1px;
+  }
+  .course-desc {
+    padding-top: 15px;
   }
 }
 /*# sourceMappingURL=maps/index.css.map */
