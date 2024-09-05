@@ -53,7 +53,7 @@ header {
     @include flex;
 
     a {
-        padding: 10px 18px;
+        padding: 8px 20px;
         text-decoration: none;
         transition: background-color 0.5s ease, border-radius 0.6s;
 
@@ -118,7 +118,7 @@ header {
     display: none;
 }
 
-@include adaptive(800px){
+@include adaptive(824px){
     #burger:checked {
         ~.menu-list {
             height: 252px;
