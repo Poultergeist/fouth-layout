@@ -3,7 +3,7 @@
 
 .reg-wrapper {
     @include flex(row, $justify: center);
-    background-color: $reg-gray;
+    background-color: $white-gray;
 }
 
 .registration {
@@ -31,7 +31,7 @@
         line-height: 1.75;
         font-size: 18px;
         font-weight: lighter;
-        color: $grey;
+        color: $gray;
     }
 }
 
@@ -64,7 +64,7 @@
         @include round(7px);
         padding: 15px;
         font-size: 14px;
-        border: $ligther-grey 1px solid;
+        border: $ligther-gray 1px solid;
         transition: border 0.5s ease, box-shadow 0.5s ease;
     }
 

@@ -1,0 +1,47 @@
+@import "mixins";
+@import "colors";
+
+.video-block-wrapper {
+  @include flex(row, center, center);
+  background-color: $white-gray
+}
+
+.video-block {
+  @include flex(column, center, center);
+
+  >h1{
+    font-size: 34px;
+    padding-top: 67px;
+    padding-bottom: 19px;
+    font-weight: 400;
+  }
+  >span {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 1.34;
+  }
+
+  .video {
+    @include flex(row, center, center);
+    padding-top: 30px;
+    max-width: 1020px;
+    width: 100%;
+    aspect-ratio: 16 / 8.65;
+    min-height: 220px;
+  }
+}
+
+@include adaptive(750px) {
+  .video-block {
+    >h1 {
+      font-size: 24px;
+      padding-top: 63px;
+    }
+
+    >span {
+      font-size: 16px;
+      line-height: 1.37;
+    }
+  }
+}
