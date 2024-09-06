@@ -8,10 +8,11 @@
 
 .video-block {
   @include flex(column, center, center);
+  padding-top: 67px;
+  padding-bottom: 63px;
 
   >h1{
     font-size: 34px;
-    padding-top: 67px;
     padding-bottom: 19px;
     font-weight: 400;
   }
@@ -34,9 +35,11 @@
 
 @include adaptive(750px) {
   .video-block {
+    padding-top: 63px;
+    padding-bottom: 65px;
+
     >h1 {
       font-size: 24px;
-      padding-top: 63px;
     }
 
     >span {
