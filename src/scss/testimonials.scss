@@ -28,8 +28,13 @@
       @include flex(row, center, center);
     }
 
+
+    &-slider {
+      margin-bottom: 34px;
+    }
+
     &-dots {
-      position: inherit;
+      position: unset;
       padding-top: 101px;
 
       li {
@@ -99,7 +104,7 @@
     }
 
     &-slider-wrapper {
-      padding-top: 5px;
+      padding-top: 7px;
     }
 
     &-slide {
@@ -121,7 +126,7 @@
 
 @include adaptive(440px) {
   .testimonials {
-    padding-top: 30px;
+    padding-top: 28px;
 
     h2 {
       font-size: 24px;
@@ -129,6 +134,7 @@
 
     &-slide {
       overflow: visible;
+
       &-main {
         span {
           padding: 0;
@@ -149,8 +155,14 @@
     }
 
     &-slider-wrapper {
-      .slick-dots {
-        padding-top: 92px;
+      .slick {
+        &-dots {
+          padding-top: 92px;
+        }
+
+        &-slider {
+          margin-bottom: 28px;
+        }
       }
     }
   }

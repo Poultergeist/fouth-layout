@@ -639,8 +639,11 @@ header #header {
   align-items: center;
   justify-content: center;
 }
+.testimonials-slider-wrapper .slick-slider {
+  margin-bottom: 34px;
+}
 .testimonials-slider-wrapper .slick-dots {
-  position: inherit;
+  position: unset;
   padding-top: 101px;
 }
 .testimonials-slider-wrapper .slick-dots li {
@@ -703,7 +706,7 @@ header #header {
     font-size: 28px;
   }
   .testimonials-slider-wrapper {
-    padding-top: 5px;
+    padding-top: 7px;
   }
   .testimonials-slide-main span {
     font-size: 18px;
@@ -717,7 +720,7 @@ header #header {
 }
 @media screen and (max-width: 440px) {
   .testimonials {
-    padding-top: 30px;
+    padding-top: 28px;
   }
   .testimonials h2 {
     font-size: 24px;
@@ -740,6 +743,9 @@ header #header {
   }
   .testimonials-slider-wrapper .slick-dots {
     padding-top: 92px;
+  }
+  .testimonials-slider-wrapper .slick-slider {
+    margin-bottom: 28px;
   }
   .fa-solid {
     font-size: 17px;
