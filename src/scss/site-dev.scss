@@ -79,6 +79,13 @@
 @include adaptive(1100px){
     .course-name{
         font-size: 15px;
+        width: 100%;
+    }
+}
+
+@include adaptive(851px) {
+    .courses-info{
+        padding: 0 14px;
     }
 }
 
