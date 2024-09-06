@@ -628,21 +628,26 @@ header #header {
   font-weight: 400;
 }
 
-.testimonials-slide-wrapper {
+.testimonials-slider-wrapper {
+  padding-top: 6px;
+  width: 100%;
+  overflow: hidden;
+}
+.testimonials-slider-wrapper .slick-slide {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-
-.testimonials-slider-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding-top: 6px;
-  width: 100%;
-  overflow: hidden;
+.testimonials-slider-wrapper .slick-dots {
+  position: inherit;
+  padding-top: 101px;
+}
+.testimonials-slider-wrapper .slick-dots li {
+  margin: 0 3px;
+}
+.testimonials-slider-wrapper .slick-dots li button::before {
+  font-size: 14px;
 }
 
 .fa-solid {
@@ -658,8 +663,11 @@ header #header {
 }
 
 .testimonials-slide {
-  max-width: 976px;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 976px;
 }
 .testimonials-slide-main {
   display: flex;
@@ -685,5 +693,56 @@ header #header {
   transform: skew(-15deg) translate(1px, -1px);
   font-size: 15.5px;
   color: #666666;
+}
+
+@media screen and (max-width: 630px) {
+  .testimonials {
+    padding-top: 33px;
+  }
+  .testimonials h2 {
+    font-size: 28px;
+  }
+  .testimonials-slider-wrapper {
+    padding-top: 5px;
+  }
+  .testimonials-slide-main span {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .fa-solid {
+    font-size: 26px;
+    padding-top: 4px;
+    padding-bottom: 8px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .testimonials {
+    padding-top: 30px;
+  }
+  .testimonials h2 {
+    font-size: 24px;
+  }
+  .testimonials-slide {
+    overflow: visible;
+  }
+  .testimonials-slide-main span {
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .testimonials-slide-author {
+    font-size: 16px;
+    padding-top: 16px;
+  }
+  .testimonials-slide-position {
+    font-size: 13.5px;
+    padding-top: 2px;
+  }
+  .testimonials-slider-wrapper .slick-dots {
+    padding-top: 92px;
+  }
+  .fa-solid {
+    font-size: 17px;
+  }
 }
 /*# sourceMappingURL=maps/index.css.map */

@@ -1,11 +1,12 @@
-$(document).ready(function() {
-  $(".testimonials-slides").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: true,
+$(document).ready(function(){
+  $('.testimonials-slides').slick({
+    dots: true,
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 10000,
-    dots: true,
-    draggable: false
-  })
-})
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true
+  });
+});
