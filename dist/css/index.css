@@ -215,6 +215,122 @@ header #header {
 }
 
 
+/* mentors.css */
+.mentors-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.mentors h1 {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 400;
+  padding-top: 66px;
+}
+
+.mentor-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.mentor-img {
+  padding: 0 76px;
+  resize: both;
+  overflow: auto;
+}
+.mentor-info {
+  padding-left: 30px;
+}
+.mentor-name {
+  padding-top: 30px;
+  padding-bottom: 35px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #3498db;
+}
+.mentor-desc {
+  padding-right: 30px;
+}
+.mentor-desc div {
+  padding-top: 11px;
+  letter-spacing: -0.11px;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #666666;
+}
+
+.img-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 489px;
+  height: 100%;
+}
+
+.mentors-slider .slick-dots {
+  padding-top: 11px;
+}
+.mentors-slider .slick-dots li {
+  width: 16px;
+  height: 16px;
+}
+.mentors-slider .slick-dots li button::before {
+  font-size: 14px;
+  width: 18px;
+  height: 16px;
+}
+
+@media screen and (max-width: 1050px) {
+  .img-wrapper {
+    width: 250px;
+  }
+  .img-wrapper .mentor-img {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .mentors h1 {
+    font-size: 24px;
+    padding-top: 30px;
+  }
+  .img-wrapper {
+    width: 145px;
+  }
+  .img-wrapper .mentor-img {
+    padding: 0;
+  }
+  .mentor-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mentor-info {
+    padding: 0;
+  }
+  .mentor-desc {
+    padding: 0;
+  }
+  .mentor-desc div {
+    padding-top: 12px;
+    font-size: 13.6px;
+    text-align: center;
+  }
+  .mentor-name {
+    padding-top: 19px;
+    padding-bottom: 7px;
+    font-size: 18px;
+    text-align: center;
+  }
+  .mentors-slider .slick-dots {
+    position: unset;
+    padding-top: 8px;
+  }
+}
+
+
 /* registration.css */
 .reg-wrapper {
   display: flex;
@@ -786,6 +902,7 @@ header #header {
   font-size: 18px;
   font-weight: 100;
   line-height: 1.34;
+  color: #666666;
 }
 .video-block .video {
   display: flex;
