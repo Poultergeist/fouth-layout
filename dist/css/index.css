@@ -501,6 +501,11 @@ header #header {
   letter-spacing: 0.6px;
 }
 
+.form-input-wrong {
+  border: #ff8383 1px solid;
+  box-shadow: #f1b0b0 0 0 10px 5px inset;
+}
+
 .form-input {
   display: flex;
   flex-direction: column-reverse;
@@ -529,15 +534,6 @@ header #header {
   outline: none;
   border: #66afe9 1px solid;
   box-shadow: 0 0 5px 5px #cfe3f3;
-}
-
-.form-input > input:valid:not(:hover) {
-  border-color: #40a617;
-}
-
-.form-input-wrong:invalid {
-  border: #ff8383 1px solid;
-  box-shadow: #f1b0b0 0 0 10px 5px inset;
 }
 
 .privacy-policy {

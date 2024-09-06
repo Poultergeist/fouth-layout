@@ -1,11 +1,11 @@
 $("#burger").change(function () {
-    $("#burger-check").prop("checked", this.checked);
-  });
+  $("#burger-check").prop("checked", this.checked);
+});
 
 const policyCheck = document.getElementById('form-policy');
 const formSumbit = document.getElementById('form-sumbit');
 function checkPolicy() {
-  if(!policyCheck.checked) {
+  if (!policyCheck.checked) {
     formSumbit.disabled = true;
   }
   else {
@@ -22,34 +22,45 @@ const formInterested = document.getElementById('form-interested-in');
 const formPhone = document.getElementById('form-phone');
 const formEmail = document.getElementById('form-email');
 
-formSumbit.addEventListener('click', function() {
+formSumbit.addEventListener("click", function () {
   let valid = true;
-  valid &= validity(formName);
-  valid &= validity(formSurname);
-  valid &= validity(formInterested);
-  valid &= validity(formPhone);
-  valid &= validity(formEmail);
+  formName.addEventListener("input", function () { validityCheck(this, /^[a-zа-яіїґєґ]{5,}$/i) });
+  formSurname.addEventListener("input", function () { validityCheck(this, /^[a-zа-яіїґєґ]{5,}$/i) });
+  formInterested.addEventListener("input", function () { validityCheck(this, /(developer)|(qa)/i) });
+  formPhone.addEventListener("input", function () { validityCheck(this) });
+  formEmail.addEventListener("input", function () { validityCheck(this) });
 
-  if(!valid)
+  valid &= validityCheck(formName, /[a-zа-яіїґєґ]{5,}/i);
+  valid &= validityCheck(formSurname, /[a-zа-яіїґєґ]{5,}/i);
+  valid &= validityCheck(formInterested, /(developer)|(qa)/i);
+  valid &= validityCheck(formPhone);
+  valid &= validityCheck(formEmail);
+
+  if (!valid)
     return;
-
-  formName.classList.remove('form-input-wrong');
-  formSurname.classList.remove('form-input-wrong');
-  formInterested.classList.remove('form-input-wrong');
-  formPhone.classList.remove('form-input-wrong');
-  formEmail.classList.remove('form-input-wrong');
 
   formSumbit.style.backgroundColor = '#40a617';
   formSumbit.style.cursor = 'default';
   formSumbit.textContent = 'Зареєстровано';
+  formSumbit.disabled = true;
+  policyCheck.disabled = true;
+});
 
-  formSumbit.disabled=true;
-  policyCheck.disabled=true;
-})
 
-function validity(target) {
-  if(!target.checkValidity()){
+function validityCheck(target, pattern = null) {
+  if (pattern == null) {
+    if (target.validity.valid) {
+      target.classList.remove('form-input-wrong');
+      return true;
+    }
     target.classList.add('form-input-wrong');
+    return false;
   }
-  return target.checkValidity();
+
+  if (target.value.match(pattern) != null) {
+    target.classList.remove('form-input-wrong');
+    return true;
+  }
+  target.classList.add('form-input-wrong');
+  return false;
 }
