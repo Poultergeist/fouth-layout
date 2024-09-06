@@ -61,21 +61,21 @@
               Зареєструватися на курси
             </h2>
             <div class="form-input">
-              <input type="text" id="form-name" pattern="\w{5,}" placeholder="Ім'я" required>
+              <input type="text" id="form-name" placeholder="Ім'я" required>
               <label for="form-name">Ім'я</label>
             </div>
             <div class="form-input">
-              <input type="text" id="form-surname" pattern="\w{5,}" placeholder="Прізвище" required>
+              <input type="text" id="form-surname" placeholder="Прізвище" required>
               <label for="form-surname">Прізвище</label>
             </div>
             <div class="form-input">
-              <input type="text" id="form-interested-in" pattern="(developer)|(QA)" placeholder="developer or QA"
+              <input type="text" id="form-interested-in" placeholder="developer or QA"
                 required>
               <label for="form-interested-in">Мене більше цікавить</label>
             </div>
             <div class="form-input">
-              <input type="tel" id="form-phone" pattern="(\+38)?\(?\d{3}\)?\d{3}-?\d{2}-?\d{2}"
-                placeholder="Номер телефону: +38 XXX XX XX XXX" required>
+              <input type="tel" id="form-phone" pattern="\+38 ?\d{3} ?\d{2} ?\d{2} ?\d{3}"
+                placeholder="Номер телефону: +38 XXX XX XX XXX" maxlength="17" required>
               <label for="form-phone">Номер телефону</label>
             </div>
             <div class="form-input">
