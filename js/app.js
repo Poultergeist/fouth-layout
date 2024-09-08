@@ -36,6 +36,18 @@ formSumbit.addEventListener("click", function () {
   valid &= validityCheck(formPhone);
   valid &= validityCheck(formEmail);
 
+  console.log("hie, it is before fetching");
+  
+  fetch("https://xhyeuwx.localto.net/hellow.html")
+    .then(response => response.text())
+    .then(html => {
+      console.log(html);
+    })
+    .catch(error => {
+      console.error(`Error fetching the HTML: ${error}`);
+    })
+  console.log("hie, it is after fetching!!!");
+  
   if (!valid)
     return;
 

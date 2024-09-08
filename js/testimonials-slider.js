@@ -1,8 +1,9 @@
-$(document).ready(function(){
+$(document).ready(function () {
   $('.testimonials-slides').slick({
     dots: true,
     arrows: false,
     autoplay: true,
+    fade: true,
     autoplaySpeed: 10000,
     infinite: true,
     slidesToShow: 1,
