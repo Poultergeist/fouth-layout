@@ -10,6 +10,10 @@
   font-size: 16px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1250px;
   width: 100%;
@@ -630,7 +634,7 @@ header #header {
 
 
 /* site-dev.css */
-#site-dev-wrapper {
+.site-dev-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
