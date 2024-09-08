@@ -55,17 +55,18 @@ header {
     a {
         padding: 8px 20px;
         text-decoration: none;
-        transition: background-color 0.5s ease, border-radius 0.6s;
+        transition: background-color 0.5s ease, border-radius 0.6s ease;
 
         span {
             font-size: 14px;
             color: $gray;
+            transition: color 0.5s ease;
         }
     }
 
     a:hover {
-        border-radius: 6px;
-        background-color: #EEEEEE;
+            @include round(6px);
+            background-color: #EEEEEE;
 
         span {
             color: $blue;
@@ -73,13 +74,22 @@ header {
     }
 }
 
-.menu-item:last-child {
+.active {
     a {
         @include round;
         background-color: $blue;
 
         span {
             color: white;
+        }
+
+        &:hover{
+            @include round;
+            background-color: darken($blue, 10%);
+            
+            span {
+                color: darken(white, 5%);
+            }
         }
     }
 }

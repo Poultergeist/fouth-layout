@@ -10,6 +10,10 @@
   font-size: 16px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1250px;
   width: 100%;
@@ -206,11 +210,12 @@ header #header {
 .menu-item a {
   padding: 8px 20px;
   text-decoration: none;
-  transition: background-color 0.5s ease, border-radius 0.6s;
+  transition: background-color 0.5s ease, border-radius 0.6s ease;
 }
 .menu-item a span {
   font-size: 14px;
   color: #666666;
+  transition: color 0.5s ease;
 }
 .menu-item a:hover {
   border-radius: 6px;
@@ -220,12 +225,19 @@ header #header {
   color: #337ab7;
 }
 
-.menu-item:last-child a {
+.active a {
   border-radius: 30px;
   background-color: #337ab7;
 }
-.menu-item:last-child a span {
+.active a span {
   color: white;
+}
+.active a:hover {
+  border-radius: 30px;
+  background-color: #285f8f;
+}
+.active a:hover span {
+  color: #f2f2f2;
 }
 
 .label-burger {
@@ -630,7 +642,7 @@ header #header {
 
 
 /* site-dev.css */
-#site-dev-wrapper {
+.site-dev-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -28,11 +28,11 @@
             <input type="checkbox" id="burger">
             <ul class="menu-list">
               <li class="menu-item"><a href="#"><span>Головна</span></a></li>
-              <li class="menu-item"><a href="#"><span>Програма курсу</span></a></li>
-              <li class="menu-item"><a href="#"><span>Відгуки про курс</span></a></li>
-              <li class="menu-item"><a href="#"><span>Відео</span></a></li>
-              <li class="menu-item"><a href="#"><span>Ментори</span></a></li>
-              <li class="menu-item"><a href="#"><span>Подати заявку</span></a></li>
+              <li class="menu-item" id="site-dev-ancor"><a href="#site-dev"><span>Програма курсу</span></a></li>
+              <li class="menu-item" id="testimonials-ancor"><a href="#testimonials"><span>Відгуки про курс</span></a></li>
+              <li class="menu-item" id="video-ancor"><a href="#video"><span>Відео</span></a></li>
+              <li class="menu-item" id="mentors-ancor"><a href="#mentors"><span>Ментори</span></a></li>
+              <li class="menu-item" id="registration-ancor"><a href="#registration"><span>Подати заявку</span></a></li>
             </ul>
           </menu>
         </div>
@@ -45,7 +45,7 @@
     </div>
   </header>
   <main>
-    <div class="reg-wrapper">
+    <div class="reg-wrapper jump-block" id="registration">
       <div class="container">
         <div class="registration">
           <div class="cource-general-info">
@@ -92,7 +92,7 @@
         </div>
       </div>
     </div>
-    <div id="site-dev-wrapper">
+    <div class="site-dev-wrapper jump-block" id="site-dev">
       <div class="container">
         <div class="site-dev">
           <span>Курс «Розробка сайтів»</span>
@@ -179,7 +179,7 @@
         </div>
       </div>
     </div>
-    <div class="testimonials-wrapper">
+    <div class="testimonials-wrapper jump-block" id="testimonials">
       <div class="container">
         <div class="testimonials">
           <h2>Що кажуть студенти наших курсів:</h2>
@@ -238,7 +238,7 @@
         </div>
       </div>
     </div>
-    <div class="video-block-wrapper">
+    <div class="video-block-wrapper jump-block" id="video">
       <div class="container">
         <div class="video-block">
           <h1>Відео</h1>
@@ -257,7 +257,7 @@
         </div>
       </div>
     </div>
-    <div class="mentors-wrapper">
+    <div class="mentors-wrapper jump-block" id="mentors">
       <div class="container">
         <div class="mentors">
           <h1>Наші ментори</h1>
@@ -406,6 +406,7 @@
   <script src="js/stat.js"></script>
   <script src="js/testimonials-slider.js"></script>
   <script src="js/mentors-slider.js"></script>
+  <script src="js/scroll-behavior.js"></script>
 </body>
 
 </html>

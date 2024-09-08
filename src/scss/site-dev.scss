@@ -1,7 +1,7 @@
 @import 'colors';
 @import 'mixins';
 
-#site-dev-wrapper {
+.site-dev-wrapper {
     @include flex(row, center, center);
 }
 
