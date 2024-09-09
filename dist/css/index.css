@@ -204,10 +204,10 @@ header #header {
   justify-content: flex-start;
 }
 .menu-item a {
-  border-radius: 6px;
+  border-radius: 30px;
   padding: 8px 20px;
   text-decoration: none;
-  transition: background-color 0.5s ease, border-radius 0.6s ease;
+  transition: background-color 0.5s ease;
 }
 .menu-item a span {
   font-size: 14px;
@@ -215,6 +215,7 @@ header #header {
   transition: color 0.5s ease;
 }
 .menu-item a:hover {
+  border-radius: 6px;
   background-color: #EEEEEE;
 }
 .menu-item a:hover span {
@@ -222,13 +223,13 @@ header #header {
 }
 
 .active a {
-  border-radius: 30px;
   background-color: #337ab7;
 }
 .active a span {
   color: white;
 }
 .active a:hover {
+  border-radius: 30px;
   background-color: #285f8f;
 }
 .active a:hover span {
